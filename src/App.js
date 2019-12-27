@@ -10,13 +10,14 @@ class App extends React.Component {
   }
 
   onSearchFiled = e => {
+    //method onSearchFiled -> search word in type="search"
     this.setState({
       searchField: e.target.value
     });
   };
 
   render() {
-    // console.log(this.state.persons)
+    // console.log(this.state.persons);
     // console.log(this.state.searchField);
 
     // const filterRobot = this.state.persons.filter(person => person.name.includes(this.state.searchField))
@@ -27,7 +28,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <SearchBox searchChange={this.onSearchFiled} />
+        <SearchBox searchChange={this.onSearchFiled} name="ploy" />
         <PersonList persons={filterRobot} />
       </div>
     );
